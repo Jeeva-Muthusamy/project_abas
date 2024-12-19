@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .navigation {
+            display: flex;
+            /* border: solid; */
+            /* width: 100%; */
+        }
+
+        .one {
+            /* border: solid; */
+        }
+
+        .one>h1 {
+            padding: 30px;
+            padding-left: 90px;
+            color: teal;
+            position: relative;
+            left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .two>ul>li:hover {
+            color: teal;
+        }
+
+        .two>ul {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            right: 10px;
+        }
+
+        .two>ul>li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            padding: 20px;
+            padding-top: 40px;
+            /* border: solid; */
+            text-align: center;
+            /* margin-left:15px ; */
+        }
+
+        .two {
+            /* border: solid; */
+        }
+
+        .three>h3 {
+            position: relative;
+            top: 30px;
+            left: 80px;
+            /* float: right; */
+            /* padding-top: 40px; */
+            /* padding-left: 60px; */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .firstimg {
+            width: 100%;
+            height: 90vh;
+            background-image: url(/image2.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            background-color: rgba(1, 10, 1, 0.572);
+            background-position: center center;
+        }
+
+        .firstimg>div {
+            width: 60%;
+            /* height: 90vh; */
+            position: relative;
+            top: 250px;
+            left: 90px;
+        }
+
+        .firstimg>div>.h3 {
+            background-color: rgba(255, 255, 255, 0.199);
+            width: 20%;
+            height: 30px;
+            padding-right: 5px;
+            padding-bottom: 10px;
+            text-align: center;
+            border-radius: 50px;
+            color: white;
+            margin-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .firstimg>div>.h1 {
+            color: white;
+            padding: 20px;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .firstimg>div>.para {
+            color: white;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* padding: 20px; */
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .artick {
+            /* border: solid; */
+            height: 60vh;
+            margin-right: 60px;
+        }
+
+        .main>.artick>ul>li {
+            list-style: none;
+            color: teal;
+            height: 25px;
+            padding: 5px;
+            padding-top: 10px;
+            width: 30%;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 90px;
+            width: 50%;
+            font-weight: bolder;
+        }
+
+        .main>.artick>ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 50%;
+        }
+
+        .main>.artick>ul>li:hover {
+            background-color: rgba(97, 97, 97, 0.26);
+            border-radius: 10px;
+            padding: 5px;
+            padding-top: 10px;
+            margin-left: 90px;
+            width: 50%;
+            color: #16455c;
+            font-weight: bold;
+        }
+
+        .main>.search {
+            /* border: solid #61616142 3px; */
+            /* background-color: #61616142; */
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 10px;
+            width: 60%;
+            padding: 2px;
+            box-shadow: 0px 0px 2px 2px #61616142;
+            margin-right: 90px;
+        }
+
+        .allarticles {
+            display: flex;
+            flex-wrap: wrap;
+            width: 70%;
+        }
+
+        .allarticles>.done {
+            height: 80vh;
+            width: 400px;
+            /* border: #16455c solid; */
+            box-shadow: 0px 0px 5px 5px #14141442;
+            position: relative;
+            bottom: 280px;
+            left: 90px;
+            border-radius: 10px;
+        }
+
+        .allarticles>.done>h4 {
+            font-size: medium;
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.done>h2,
+        h5,
+        h3 {
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.done>h5 {
+            padding-top: 2px;
+            color: rgba(0, 0, 0, 0.74);
+        }
+
+        .allarticles>.done>h3 {
+            padding-top: 15px;
+
+        }
+
+        .allarticles>.dtwo {
+            height: 80vh;
+            width: 400px;
+            /* border: #16455c solid; */
+            box-shadow: 0px 0px 5px 5px #14141442;
+            position: relative;
+            bottom: 280px;
+            left: 125px;
+            border-radius: 10px;
+        }
+
+        .allarticles>.dtwo>h4 {
+            font-size: medium;
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dtwo>h2,
+        h5,
+        h3 {
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dtwo>h5 {
+            padding-top: 2px;
+            color: rgba(0, 0, 0, 0.74);
+        }
+
+        .allarticles>.dtwo>h3 {
+            padding-top: 15px;
+        }
+
+        .allarticles>.dthree {
+            height: 80vh;
+            width: 400px;
+            /* border: #16455c solid; */
+            box-shadow: 0px 0px 5px 5px #14141442;
+            position: relative;
+            bottom: 280px;
+            left: 90px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .allarticles>.dthree>h4 {
+            font-size: medium;
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dthree>h2,
+        h5,
+        h3 {
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dthree>h5 {
+            padding-top: 2px;
+            color: rgba(0, 0, 0, 0.74);
+        }
+
+        .allarticles>.dthree>h3 {
+            padding-top: 15px;
+
+        }
+
+        .allarticles>.dfour {
+            height: 80vh;
+            width: 400px;
+            /* border: #16455c solid; */
+            box-shadow: 0px 0px 5px 5px #14141442;
+            position: relative;
+            bottom: 280px;
+            left: 125px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .allarticles>.dfour>h4 {
+            font-size: medium;
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dfour>h2,
+        h5,
+        h3 {
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dfour>h5 {
+            padding-top: 2px;
+            color: rgba(0, 0, 0, 0.74);
+        }
+
+        .allarticles>.dfour>h3 {
+            padding-top: 15px;
+        }
+
+        .allarticles>.dfive {
+            height: 80vh;
+            width: 400px;
+            /* border: #16455c solid; */
+            box-shadow: 0px 0px 5px 5px #14141442;
+            position: relative;
+            bottom: 280px;
+            left: 90px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .allarticles>.dfive>h4 {
+            font-size: medium;
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dfive>h2,
+        h5,
+        h3 {
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dfive>h5 {
+            padding-top: 2px;
+            color: rgba(0, 0, 0, 0.74);
+        }
+
+        .allarticles>.dfive>h3 {
+            padding-top: 15px;
+
+        }
+
+        .allarticles>.dsix {
+            height: 80vh;
+            width: 400px;
+            /* border: #16455c solid; */
+            box-shadow: 0px 0px 5px 5px #14141442;
+            position: relative;
+            bottom: 280px;
+            left: 125px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .allarticles>.dsix>h4 {
+            font-size: medium;
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dsix>h2,
+        h5,
+        h3 {
+            padding: 10px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .allarticles>.dsix>h5 {
+            padding-top: 2px;
+            color: rgba(0, 0, 0, 0.74);
+        }
+
+        .allarticles>.dsix>h3 {
+            padding-top: 15px;
+        }
+
+        .page {
+            /* border: solid; */
+            display: flex;
+            flex-direction: row;
+            z-index: 3;
+            /* height: 50px; */
+            position: relative;
+            bottom: 200px;
+            left: 400px;
+            transition: all 5s;
+        }
+
+        .page>a {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            box-shadow: 0px 0px 2px 2px #14141442;
+            margin: 3px;
+            border-radius: 5px;
+        }
+
+        .page>.active {
+            background-color: #16455c;
+            color: white;
+        }
+
+        .page>a:hover:not(.active) {
+            background-color: #417691;
+            color: white;
+        }.lastimg{
+            width: 100%;height: 80vh;
+            background-color: black;
+            overflow: hidden;
+        }.lastimg>h1{
+            color: white;
+            font-size: 70px;
+            position: relative;
+            left: 90px;top: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+        }.lastimg>h3{
+            color: rgba(255, 255, 255, 0.527);
+            position: relative;
+            left: 70px;top: 120px;
+        }.lastimg>h2{
+            color: white;
+            position: relative;
+            left: 90px;top: 160px;
+            border: solid goldenrod;
+            padding: 30px;
+            border-radius: 50px;
+            width: 190px;
+            background-color:orange;
+        }.lastimg>img{
+            position: relative;
+            bottom: 300px;right: 80px;
+            
+        }.footer{
+            height: 70vh;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .footer>.foot1{
+            position: relative;
+            left: 120px;top: 100px;
+        
+        }.footer>.foot1>h1{
+            color: #16455c;
+        }
+        .footer>.foot1>div{
+            display: inline;
+            padding: 10px;
+            margin-right: 10px;
+        font-size: 20px;
+        border-radius: 50px;
+        background-color: #00000073;
+        position: relative;
+        top: 20px;
+        }.footer>.foot1>div>a{
+            color: white;
+        }.footer>.foot2{
+            position: relative;
+            left: 200px;top: 100px;
+        }.foot3{
+            position: relative;
+            left: 200px;
+            top: 100px;
+        }.foot3>ul>li{
+            list-style: none;
+            padding: 20px;
+            text-align: center;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }.foot3>h2{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 35px;
+            padding: 10px;
+        }.foot4>h2{
+            text-align: center;
+        }.foot4{
+            position: relative;
+            left: 150px;
+            top: 100px;
+        }.foot4>ul>li{
+            list-style: none;
+            padding: 20px;
+            text-align: center;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }.foot4>h2{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 35px;
+            padding: 10px;
+        }.last{
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.295);
+        }.last>.last1>h2{
+            position: relative;
+            top: 50px;left: 90px;
+        }.last2>ul>li{
+            display: inline;
+            padding: 10px;
+            font-weight: bolder;
+            position: relative;
+            left: 40%;top: 30px;
+        }.last3>h2{
+            float: right;
+            position: relative;
+            right: 90px;
+        }@media screen and (max-width: 700px) {
+            .navigation>.one{
+                float: left;
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="one" style="flex-grow: 2;">
+            <h1><i class="fa-regular fa-handshake"></i>TRUSTCO.</h1>
+        </div>
+        <div class="two" style="flex-basis: 400px;">
+            <ul>
+                <li>Features</li>
+                <li>Solutions</li>
+                <li>Company</li>
+                <li>Resources</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="three" style="flex-grow: 3;">
+            <h3>Log In <span
+                    style="background-color: #294e60;padding: 20px;border-radius: 50px;color: white;margin-left: 20px;">Sign
+                    In</span></h3>
+        </div>
+    </div>
+    <div class="firstimg">
+        <div>
+            <div class="h3">
+                <h3>Marketing</h3>
+            </div>
+            <div class="h1">
+                <h1>How to show your bussiness more prominentin 2023</h1>
+            </div>
+            <div class="para">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatibus obcaecati consectetur
+                    eos eius nesciunt ullam facilis dolores Deleniti!</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class="artick" style="flex-basis: 70%;">
+            <ul>
+                <li>AllArtickes</li>
+                <li>Sales</li>
+                <li>Marketing</li>
+                <li>Service</li>
+                <li>Product</li>
+                <li>News</li>
+            </ul>
+        </div>
+        <div class="search" style="flex-basis: 30%;">
+            <div>
+                <h1><i class="fa-sharp fa-solid fa-magnifying-glass"
+                        style="font-size:25px;margin-right: 20px;padding: 10px;"></i><input type="text" value="Search"
+                        style="border: none;outline: none;position: relative;top: -5px;right: 20px;"></h1>
+            </div>
+            <div class="resent" style="margin-top: 40px;border-radius: 5px; box-shadow: 0px 0px 3px 3px #14141442;">
+                <h1 style="padding: 10px;">Recent Post</h1>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+            </div>
+            <div class="resent" style="margin-top: 40px;border-radius: 5px; box-shadow: 0px 0px 3px 3px #14141442;">
+                <h1 style="padding: 10px;">Recent Post</h1>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+                <h3 style="padding: 10px;">What Makes an Authentic Employee Profile?</h2>
+                    <h4 style="color: #417691;padding: 5px;padding-left: 10px;">23 nov 2022
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="allarticles">
+        <div class="done">
+            <img src="/image1.jpg" alt="img" width="400px" height="250px" style="border-radius: 10px 10px 0px 0px;">
+            <h4>23 nov 2022, <span style="color: #16455c;font-size: small;">by Amudha huge</span></h4>
+            <h2>How to blow through capital at an incredible rate ?</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae voluptate consequuntur, maiores
+                neque dolorum eligendi laudantium velit tempore eaque?</h5>
+            <h3>Read Story<i class="fa-solid fa-arrow-right" style="padding-left: 20px;color: #16455c;"></i></h3>
+        </div>
+        <div class="dtwo">
+            <img src="/image1.jpg" alt="img" width="400px" height="250px" style="border-radius: 10px 10px 0px 0px;">
+            <h4>15 nov 2022, <span style="color: #16455c;font-size: small;">by Sofia Kent</span></h4>
+            <h2>What Makes an Authentic Employee Profile</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae voluptate consequuntur, maiores
+                neque dolorum eligendi laudantium velit tempore eaque?</h5>
+            <h3>Read Story<i class="fa-solid fa-arrow-right" style="padding-left: 20px;color: #16455c;"></i></h3>
+        </div>
+        <div class="dthree">
+            <img src="/image1.jpg" alt="img" width="400px" height="250px" style="border-radius: 10px 10px 0px 0px;">
+            <h4>20 sep 2022, <span style="color: #16455c;font-size: small;">by Amudha huge</span></h4>
+            <h2>How to run your company without CEO</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae voluptate consequuntur, maiores
+                neque dolorum eligendi laudantium velit tempore eaque?</h5>
+            <h3>Read Story<i class="fa-solid fa-arrow-right" style="padding-left: 20px;color: #16455c;"></i></h3>
+        </div>
+        <div class="dfour">
+            <img src="/image1.jpg" alt="img" width="400px" height="250px" style="border-radius: 10px 10px 0px 0px;">
+            <h4>11 sep 2022, <span style="color: #16455c;font-size: small;">by Jason Bone</span></h4>
+            <h2>Why dowe need to get outsource CEO</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae voluptate consequuntur, maiores
+                neque dolorum eligendi laudantium velit tempore eaque?</h5>
+            <h3>Read Story<i class="fa-solid fa-arrow-right" style="padding-left: 20px;color: #16455c;"></i></h3>
+        </div>
+        <div class="dfive">
+            <img src="/image1.jpg" alt="img" width="400px" height="250px" style="border-radius: 10px 10px 0px 0px;">
+            <h4>30 aug 2022, <span style="color: #16455c;font-size: small;">by Amudha huge</span></h4>
+            <h2>Do we need learn any language to be better CEO</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae voluptate consequuntur, maiores
+                neque dolorum eligendi laudantium velit tempore eaque?</h5>
+            <h3>Read Story<i class="fa-solid fa-arrow-right" style="padding-left: 20px;color: #16455c;"></i></h3>
+        </div>
+        <div class="dsix">
+            <img src="/image1.jpg" alt="img" width="400px" height="250px" style="border-radius: 10px 10px 0px 0px;">
+            <h4>30 aug 2022, <span style="color: #16455c;font-size: small;">by Jason Bone</span></h4>
+            <h2>How to show your bussiness more prominent in 2023</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae voluptate consequuntur, maiores
+                neque dolorum eligendi laudantium velit tempore eaque?</h5>
+            <h3>Read Story<i class="fa-solid fa-arrow-right" style="padding-left: 20px;color: #16455c;"></i></h3>
+        </div>
+        <div class="page">
+            <a href="#">&lang;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&rang;</a>
+        </div>
+    </div>
+    <div class="lastimg">
+        <h1>Have A Question? Feel <br>Free To <span style="color: orange;">Contact Us</span>.</h1>
+        <h3>Ask about your business or anything</h4>
+        <h2>Contact Us<i class="fa-solid fa-phone" style="color: white;padding-left: 20px;"></i></h3>
+            <img src="/Picsart_24-12-16_02-25-26-247.png" alt="" width="450px" style="float: right;height: 90vh;">
+    </div>
+    <div class="footer">
+        <div class="foot1"> <h1><i class="fa-regular fa-handshake" style="flex-basis: 30%;"></i>TRUSTCO.</h1>
+            <div><a href="https://www.instagram.com/_precious._.boi_/profilecard/?igsh=MXE1bHIxaHVtbXp3dw=="><i
+                class="fa-brands fa-instagram"></i></a></div>
+    <div><a href="https://www.facebook.com/share/15Hrn5LQ1Y/"><i class="fa-brands fa-facebook"></i></a></div>
+    <div><a href="https://www.instagram.com/_precious._.boi_/profilecard/?igsh=MXE1bHIxaHVtbXp3dw=="><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></div>
+        </div>
+        <div class="foot2" style="flex-basis: 30%;height: 200px;">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum alias magnam aspernatur. Perferendis, velit officia! Quaerat beatae nobis nihil iure? Dolorem maxime nemo tempora earum eaque, necessitatibus natus quidem aliquid.</h2>
+        </div>
+        <div class="foot3" style="flex-basis: 20%;">
+            <h2>Home</h2>
+            <ul>
+                <li>Features</li>
+                <li>Solutions</li>
+                <li>Resources</li>
+                <li>Pricing</li>
+            </ul>
+        </div>
+        <div class="foot4" style="flex-basis: 20%;">
+            <h2>About Us</h2>
+            <ul>
+                <li>Company</li>
+                <li>Contact</li>
+                <li>Career</li>
+            </ul>
+        </div>
+    </div>
+    <div class="last">
+        <div class="last1" style="flex-basis: 30%;"><h2><i class="fa-regular fa-copyright"></i>2022-2023 Trustco.</h1></div>
+        <div class="last2" style="flex-basis:40% ;">
+            <ul>
+            <li>Term of Service</li>
+            <li>PrivacyPolicy</li>
+            <li>Language</li>
+        </ul></div>
+        <div class="last3" style="flex-basis: 30%;">
+            <h2><i class="fa-solid fa-earth-americas"></i>English</h2>
+        </div>
+    </div>
+</body>
+
+</html>
